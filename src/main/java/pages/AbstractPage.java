@@ -14,10 +14,10 @@ public abstract class AbstractPage {
 	}
 
 	public void checkURL() {
-		Assert.assertEquals("Url не совпадает", url, driver.getCurrentUrl());
+		Assert.assertEquals("Url РЅРµ СЃРѕРІРїР°РґР°РµС‚", url, driver.getCurrentUrl());
 	}
 
-	// Идем на страницу вызывающего пейджа(Если это возможно)
+	// РРґРµРј РЅР° СЃС‚СЂР°РЅРёС†Сѓ РІС‹Р·С‹РІР°СЋС‰РµРіРѕ РїРµР№РґР¶Р°(Р•СЃР»Рё СЌС‚Рѕ РІРѕР·РјРѕР¶РЅРѕ)
 	public void goToPage() {
 		if (url != null) {
 			goToPage(url);
@@ -29,3 +29,4 @@ public abstract class AbstractPage {
 	}
 
 }
+

@@ -11,17 +11,17 @@ public class TestOrderBy extends BaseTest {
 	@Test
 	public void orderByInc() throws Exception{
 		CatalogPage catalogPage = new CatalogPage(webDriver);
-		catalogPage.goToPage(Constants.URL_MEIZU_PAGE); // Идем на страницу с телефонами Meizu
-		catalogPage.orderByPrice(OrderBy.INC); // Делаем сортировку по возрастанию
-		catalogPage.checkOrderByPrice(OrderBy.INC); // Проверяем что сортировка прошла успешно
+		catalogPage.goToPage(Constants.URL_MEIZU_PAGE); // РРґРµРј РЅР° СЃС‚СЂР°РЅРёС†Сѓ СЃ С‚РµР»РµС„РѕРЅР°РјРё Meizu
+		catalogPage.orderByPrice(OrderBy.INC); // Р”РµР»Р°РµРј СЃРѕСЂС‚РёСЂРѕРІРєСѓ РїРѕ РІРѕР·СЂР°СЃС‚Р°РЅРёСЋ
+		catalogPage.checkOrderByPrice(OrderBy.INC); // РџСЂРѕРІРµСЂСЏРµРј С‡С‚Рѕ СЃРѕСЂС‚РёСЂРѕРІРєР° РїСЂРѕС€Р»Р° СѓСЃРїРµС€РЅРѕ
 	}
 	
 	@Test
 	public void orderByDec() throws Exception{
 		CatalogPage catalogPage = new CatalogPage(webDriver);
-		catalogPage.goToPage(Constants.URL_MEIZU_PAGE); // Идем на страницу с телефонами Meizu
-		catalogPage.orderByPrice(OrderBy.DEC); // Делаем сортировку по убыванию
-		catalogPage.checkOrderByPrice(OrderBy.DEC); // Проверяем что сортировка прошла успешно
+		catalogPage.goToPage(Constants.URL_MEIZU_PAGE); // РРґРµРј РЅР° СЃС‚СЂР°РЅРёС†Сѓ СЃ С‚РµР»РµС„РѕРЅР°РјРё Meizu
+		catalogPage.orderByPrice(OrderBy.DEC); // Р”РµР»Р°РµРј СЃРѕСЂС‚РёСЂРѕРІРєСѓ РїРѕ СѓР±С‹РІР°РЅРёСЋ
+		catalogPage.checkOrderByPrice(OrderBy.DEC); // РџСЂРѕРІРµСЂСЏРµРј С‡С‚Рѕ СЃРѕСЂС‚РёСЂРѕРІРєР° РїСЂРѕС€Р»Р° СѓСЃРїРµС€РЅРѕ
 	}
 
 }

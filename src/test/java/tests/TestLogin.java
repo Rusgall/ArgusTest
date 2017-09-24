@@ -12,25 +12,25 @@ public class TestLogin extends BaseTest{
 	@Test
 	public void loginSuccessfully(){
 		MainPage mainPage = new MainPage(webDriver);
-		mainPage.goToPage(); // идем на главную страницу
+		mainPage.goToPage(); // РёРґРµРј РЅР° РіР»Р°РІРЅСѓСЋ СЃС‚СЂР°РЅРёС†Сѓ
 		
-		LoginPage loginPage = mainPage.clickSignIn();//Переходим к логину
-		loginPage.checkURL();//Проверяем ссылку
+		LoginPage loginPage = mainPage.clickSignIn();//РџРµСЂРµС…РѕРґРёРј Рє Р»РѕРіРёРЅСѓ
+		loginPage.checkURL();//РџСЂРѕРІРµСЂСЏРµРј СЃСЃС‹Р»РєСѓ
 		
-		UserPage userPage = loginPage.loginSuccess(Constants.EMAIL, Constants.PASS_CORRECT); // Логинимся под корректными данными
-		userPage.checkURL();//Проверяем ссылку
-		userPage.checkUserName(Constants.USERNAME);//Проверяем логин и мыло
+		UserPage userPage = loginPage.loginSuccess(Constants.EMAIL, Constants.PASS_CORRECT); // Р›РѕРіРёРЅРёРјСЃСЏ РїРѕРґ РєРѕСЂСЂРµРєС‚РЅС‹РјРё РґР°РЅРЅС‹РјРё
+		userPage.checkURL();//РџСЂРѕРІРµСЂСЏРµРј СЃСЃС‹Р»РєСѓ
+		userPage.checkUserName(Constants.USERNAME);//РџСЂРѕРІРµСЂСЏРµРј Р»РѕРіРёРЅ Рё РјС‹Р»Рѕ
 		userPage.checkEmail(Constants.EMAIL);
 	}
 	
 	@Test
 	public void loginFailed(){
 		MainPage mainPage = new MainPage(webDriver);
-		mainPage.goToPage(); // идем на главную страницу
+		mainPage.goToPage(); // РёРґРµРј РЅР° РіР»Р°РІРЅСѓСЋ СЃС‚СЂР°РЅРёС†Сѓ
 
-		LoginPage loginPage = mainPage.clickSignIn();//Переходим к логину
-		loginPage.loginFail(Constants.EMAIL, Constants.PASS_INCORRECT); // Логинимся под некорректными данными
-		loginPage.checkURL();// Проверяем что остались на странице логина
+		LoginPage loginPage = mainPage.clickSignIn();//РџРµСЂРµС…РѕРґРёРј Рє Р»РѕРіРёРЅСѓ
+		loginPage.loginFail(Constants.EMAIL, Constants.PASS_INCORRECT); // Р›РѕРіРёРЅРёРјСЃСЏ РїРѕРґ РЅРµРєРѕСЂСЂРµРєС‚РЅС‹РјРё РґР°РЅРЅС‹РјРё
+		loginPage.checkURL();// РџСЂРѕРІРµСЂСЏРµРј С‡С‚Рѕ РѕСЃС‚Р°Р»РёСЃСЊ РЅР° СЃС‚СЂР°РЅРёС†Рµ Р»РѕРіРёРЅР°
 	}
 
 }

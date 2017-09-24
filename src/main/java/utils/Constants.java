@@ -9,6 +9,6 @@ public class Constants {
 	public static final String EMAIL = "notbad.rr@mail.ru";
 	public static final String PASS_CORRECT = "correctPass";
 	public static final String PASS_INCORRECT = "IncorrectPass";
-	public static final String USERNAME = "Руслан";
+	public static final String USERNAME = "Р СѓСЃР»Р°РЅ";
 
 }

@@ -24,10 +24,10 @@ public class UserPage extends AbstractPage {
 	}
 	
 	public void checkUserName(String name){
-		Assert.assertEquals("ФИО не совпадает", name, nameInput.getAttribute("value"));
+		Assert.assertEquals("Р¤РРћ РЅРµ СЃРѕРІРїР°РґР°РµС‚", name, nameInput.getAttribute("value"));
 	}
 	
 	public void checkEmail(String email){
-		Assert.assertEquals("Email не совпадает", email, emailInput.getAttribute("value"));
+		Assert.assertEquals("Email РЅРµ СЃРѕРІРїР°РґР°РµС‚", email, emailInput.getAttribute("value"));
 	}
 }

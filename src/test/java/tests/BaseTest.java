@@ -16,7 +16,7 @@ public class BaseTest {
 
 	@BeforeClass
 	public static void beforeClass() {
-		// Тут захардкодил путь к драйверу
+		// РўСѓС‚ Р·Р°С…Р°СЂРґРєРѕРґРёР» РїСѓС‚СЊ Рє РґСЂР°Р№РІРµСЂСѓ
 		System.setProperty("webdriver.chrome.driver", "D:/Ruslan/chromedriver_win32/chromedriver.exe");
 	}
 

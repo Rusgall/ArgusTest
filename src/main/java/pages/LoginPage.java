@@ -55,7 +55,7 @@ public class LoginPage extends AbstractPage {
 		enterEmail(email);
 		enterPass(pass);
 		clickBtnLogin();
-		Assert.assertEquals("Неверный текст ошибки", "Неверный логин или пароль", errorLoginMsg.getText());
+		Assert.assertEquals("РќРµРІРµСЂРЅС‹Р№ С‚РµРєСЃС‚ РѕС€РёР±РєРё", "РќРµРІРµСЂРЅС‹Р№ Р»РѕРіРёРЅ РёР»Рё РїР°СЂРѕР»СЊ", errorLoginMsg.getText());
 	}
 
 }

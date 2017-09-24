@@ -27,12 +27,12 @@ public class CatalogPage extends AbstractPage {
 	WebElement orderByDecPriceBtn;
 
 	public CatalogPage(WebDriver driver) {
-		super(driver, null); // Это пейдж не конкретной страницы, поэтому урла не будет
+		super(driver, null); // Р­С‚Рѕ РїРµР№РґР¶ РЅРµ РєРѕРЅРєСЂРµС‚РЅРѕР№ СЃС‚СЂР°РЅРёС†С‹, РїРѕСЌС‚РѕРјСѓ СѓСЂР»Р° РЅРµ Р±СѓРґРµС‚
 
 		PageFactory.initElements(driver, this);
 	}
 
-	//Сортируем товары на странице
+	//РЎРѕСЂС‚РёСЂСѓРµРј С‚РѕРІР°СЂС‹ РЅР° СЃС‚СЂР°РЅРёС†Рµ
 	public void orderByPrice(OrderBy orderBy) throws Exception {
 		orderBtn.click();
 		
@@ -44,23 +44,23 @@ public class CatalogPage extends AbstractPage {
 			orderByDecPriceBtn.click();
 			break;
 		default:
-			throw new Exception("Передали не тот тип сортировки");
+			throw new Exception("РџРµСЂРµРґР°Р»Рё РЅРµ С‚РѕС‚ С‚РёРї СЃРѕСЂС‚РёСЂРѕРІРєРё");
 		}
 	}
 
 	public void checkOrderByPrice(OrderBy orderBy) throws Exception {
-		List<WebElement> productList = catalog.findElements(By.className("item")); // получаем список продуктов
+		List<WebElement> productList = catalog.findElements(By.className("item")); // РїРѕР»СѓС‡Р°РµРј СЃРїРёСЃРѕРє РїСЂРѕРґСѓРєС‚РѕРІ
 
-		for (int i = 1; i < productList.size(); i++) { // начинаем поиск со 2 элемента
-			Integer price1, price2; // цена сравниваемых товаров
+		for (int i = 1; i < productList.size(); i++) { // РЅР°С‡РёРЅР°РµРј РїРѕРёСЃРє СЃРѕ 2 СЌР»РµРјРµРЅС‚Р°
+			Integer price1, price2; // С†РµРЅР° СЃСЂР°РІРЅРёРІР°РµРјС‹С… С‚РѕРІР°СЂРѕРІ
 
-			// берем цену предыдущего элемента
+			// Р±РµСЂРµРј С†РµРЅСѓ РїСЂРµРґС‹РґСѓС‰РµРіРѕ СЌР»РµРјРµРЅС‚Р°
 			String priceString = productList.get(i - 1).findElement(By.className("price")).findElement(By.tagName("ins")).getText(); 
-			price1 = StringHelper.getDigit(priceString); // конвертируем стрингу в инт
+			price1 = StringHelper.getDigit(priceString); // РєРѕРЅРІРµСЂС‚РёСЂСѓРµРј СЃС‚СЂРёРЅРіСѓ РІ РёРЅС‚
 
-			// берем цену текущего элемента
+			// Р±РµСЂРµРј С†РµРЅСѓ С‚РµРєСѓС‰РµРіРѕ СЌР»РµРјРµРЅС‚Р°
 			priceString = productList.get(i).findElement(By.className("price")).findElement(By.tagName("ins")).getText(); 
-			price2 = StringHelper.getDigit(priceString); // конвертируем стрингу в инт
+			price2 = StringHelper.getDigit(priceString); // РєРѕРЅРІРµСЂС‚РёСЂСѓРµРј СЃС‚СЂРёРЅРіСѓ РІ РёРЅС‚
 
 			int result;
 			switch (orderBy) {
@@ -71,11 +71,11 @@ public class CatalogPage extends AbstractPage {
 				result = price2.compareTo(price1);
 				break;
 			default:
-				throw new Exception("Передали не тот тип сортировки");
+				throw new Exception("РџРµСЂРµРґР°Р»Рё РЅРµ С‚РѕС‚ С‚РёРї СЃРѕСЂС‚РёСЂРѕРІРєРё");
 			}
 
-			if (result > 0) { // Если сортировка отработала правильно, то result не должен быть больше 0
-				Assert.assertFalse("Цена не по порядку", true);
+			if (result > 0) { // Р•СЃР»Рё СЃРѕСЂС‚РёСЂРѕРІРєР° РѕС‚СЂР°Р±РѕС‚Р°Р»Р° РїСЂР°РІРёР»СЊРЅРѕ, С‚Рѕ result РЅРµ РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ Р±РѕР»СЊС€Рµ 0
+				Assert.assertFalse("Р¦РµРЅР° РЅРµ РїРѕ РїРѕСЂСЏРґРєСѓ", true);
 			}
 
 		}

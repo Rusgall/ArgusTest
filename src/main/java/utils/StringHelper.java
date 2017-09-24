@@ -3,7 +3,7 @@ package utils;
 public class StringHelper {
 
 	/**
-	 * Конвертируем стрингу в число, убираем все лишние знаки кроме цифр
+	 * РљРѕРЅРІРµСЂС‚РёСЂСѓРµРј СЃС‚СЂРёРЅРіСѓ РІ С‡РёСЃР»Рѕ, СѓР±РёСЂР°РµРј РІСЃРµ Р»РёС€РЅРёРµ Р·РЅР°РєРё РєСЂРѕРјРµ С†РёС„СЂ
 	 */
 	public static int getDigit(String string){
 		int digital = Integer.valueOf(string.replaceAll("[^0-9]",""));
